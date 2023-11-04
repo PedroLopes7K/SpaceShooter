@@ -9,7 +9,7 @@ public class Meteor : Enemy
 
     private float speed;
 
-    private float rotateSpeed = 109.0f ;
+    private float rotateSpeed = 120.0f ;
 
     // Start is called before the first frame update
     void Start()
