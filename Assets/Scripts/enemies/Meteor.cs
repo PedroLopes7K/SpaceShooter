@@ -38,6 +38,7 @@ public class Meteor : Enemy
     public override void DeathSequence()
     {
         base.DeathSequence();
+        Instantiate(explosion, transform.position, transform.rotation);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -49,7 +50,9 @@ public class Meteor : Enemy
             PlayerStates playerState = collision.GetComponent<PlayerStates>();
 
             playerState.PlayerTakeDamage(damage);
+            Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
+
         }
     }
 

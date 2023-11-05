@@ -14,7 +14,10 @@ public class PlayerControl : MonoBehaviour
     private float maxLeft;
     private float maxUp;
     private float maxDown;
-    
+
+    [SerializeField] protected GameObject explosion;
+
+
     void Start()
     {
         mainCam = Camera.main;

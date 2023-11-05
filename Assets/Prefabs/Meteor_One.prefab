@@ -163,5 +163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   rb: {fileID: 1502262652985573162}
+  explosion: {fileID: 6729876648734692176, guid: edd2d6a7a8cb34071a03674dd789aedb, type: 3}
   minSpeed: 8
   maxSpeed: 10
