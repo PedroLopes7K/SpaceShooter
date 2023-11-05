@@ -8,6 +8,7 @@ public class Meteor : Enemy
     [SerializeField] protected float maxSpeed;
 
     private float speed;
+    private float damage = 1.0f;
 
     private float rotateSpeed = 120.0f ;
 
@@ -30,20 +31,25 @@ public class Meteor : Enemy
 
     public override void HurtSequence()
     {
-        //base.HurtSequence();
+        base.HurtSequence();
 
     }
 
     public override void DeathSequence()
     {
-        //base.DeathSequence();
+        base.DeathSequence();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+
+            PlayerStates playerState = collision.GetComponent<PlayerStates>();
+
+            playerState.PlayerTakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 

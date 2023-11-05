@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField]protected float health;
+    [SerializeField]protected float health = 1;
     [SerializeField]protected Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,6 @@ public class Enemy : MonoBehaviour
     }
     public virtual void DeathSequence()
     {
-
+        Destroy(gameObject);
     }
 }
