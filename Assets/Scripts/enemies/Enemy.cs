@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]protected float health = 1;
     [SerializeField]protected Rigidbody2D rb;
     [SerializeField]protected GameObject explosion;
+
+    [SerializeField] protected Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {

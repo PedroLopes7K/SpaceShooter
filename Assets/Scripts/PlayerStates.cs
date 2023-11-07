@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerStates : MonoBehaviour
 {
 
-    private float maxHealth = 3;
+    private float maxHealth = 10;
     private float health;
     [SerializeField] private Animator animator;
     [SerializeField] private Image healthFill;

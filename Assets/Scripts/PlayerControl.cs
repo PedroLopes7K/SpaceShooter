@@ -15,7 +15,6 @@ public class PlayerControl : MonoBehaviour
     private float maxUp;
     private float maxDown;
 
-    [SerializeField] protected GameObject explosion;
 
 
     void Start()
