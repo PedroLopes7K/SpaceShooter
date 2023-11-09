@@ -258,12 +258,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3daa69eafae584ffeb0065377c3b0c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 2
   rb: {fileID: 611902770246466982}
   explosion: {fileID: 6729876648734692176, guid: edd2d6a7a8cb34071a03674dd789aedb, type: 3}
   anim: {fileID: 4390676406451588197}
-  speed: 3
-  shootInterval: 0.5
+  speed: 6
+  shootInterval: 1
   leftShoot: {fileID: 5732135604925992966}
   rightShoot: {fileID: 4520007098317833971}
   bullet: {fileID: 4731748281209841784, guid: bc13f785251c3412cbc50d46bce8c754, type: 3}
