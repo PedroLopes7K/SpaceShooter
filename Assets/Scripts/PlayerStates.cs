@@ -20,6 +20,8 @@ public class PlayerStates : MonoBehaviour
     {
         health = maxHealth;
         healthFill.fillAmount = health / maxHealth;
+        EndGameManager.endGameManager.gameOver = false;
+
     }
 
     // Update is called once per frame
