@@ -164,5 +164,7 @@ MonoBehaviour:
   health: 1
   rb: {fileID: 2202528747622530364}
   explosion: {fileID: 6729876648734692176, guid: edd2d6a7a8cb34071a03674dd789aedb, type: 3}
+  anim: {fileID: 0}
+  scoreValue: 3
   minSpeed: 8
   maxSpeed: 10

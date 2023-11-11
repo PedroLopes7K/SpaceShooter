@@ -224,4 +224,5 @@ MonoBehaviour:
   rb: {fileID: 6184607076252101140}
   explosion: {fileID: 6729876648734692176, guid: edd2d6a7a8cb34071a03674dd789aedb, type: 3}
   anim: {fileID: 2092293938149869640}
+  scoreValue: 5
   speed: 4

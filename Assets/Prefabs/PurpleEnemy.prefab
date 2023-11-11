@@ -262,6 +262,7 @@ MonoBehaviour:
   rb: {fileID: 611902770246466982}
   explosion: {fileID: 6729876648734692176, guid: edd2d6a7a8cb34071a03674dd789aedb, type: 3}
   anim: {fileID: 4390676406451588197}
+  scoreValue: 10
   speed: 6
   shootInterval: 1
   leftShoot: {fileID: 5732135604925992966}

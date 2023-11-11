@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]protected GameObject explosion;
 
     [SerializeField] protected Animator anim;
+    [Header("Score"), SerializeField]
+    protected int scoreValue;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,8 @@ public class Enemy : MonoBehaviour
     }
     public virtual void DeathSequence()
     {
+
+        EndGameManager.endGameManager.updateScore(scoreValue);
         Destroy(gameObject);
     }
 }

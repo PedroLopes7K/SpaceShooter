@@ -31,6 +31,8 @@ public class EnemyGreen : Enemy
     }
     public override void DeathSequence()
     {
+
+        base.DeathSequence();
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
