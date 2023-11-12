@@ -45,7 +45,9 @@ public class FadeCanvas : MonoBehaviour
         fadeStart = false;
         while(canvasGroup.alpha > 0) {
 
-            //if (fadeStart) yield break;
+            // VALIDAR
+
+            if (fadeStart) yield break;
             canvasGroup.alpha -= changeValue;
             yield return new WaitForSeconds(waitTime);
         }
@@ -58,8 +60,8 @@ public class FadeCanvas : MonoBehaviour
     IEnumerator FadeOutString(string levelName)
 
     {
-
-        //if (canvasGroup.alpha != 0) yield break;
+        // VALIDAR
+        if (canvasGroup.alpha != 0) yield break;
         if (fadeStart) yield break;
 
         fadeStart = true;

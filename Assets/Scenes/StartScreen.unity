@@ -896,8 +896,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 110
-  m_fontSizeBase: 110
+  m_fontSize: 116
+  m_fontSizeBase: 116
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1673,6 +1673,7 @@ GameObject:
   - component: {fileID: 8740647537847372027}
   - component: {fileID: 645606670862871398}
   - component: {fileID: 1900613071957785380}
+  - component: {fileID: 8740647537847372028}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1726,6 +1727,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &8740647537847372028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823235666673522956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11db3b3ba17a744318193f54f0ddd393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textTapToPlay: {fileID: 1413956795}
+  changeRate: 0.02
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

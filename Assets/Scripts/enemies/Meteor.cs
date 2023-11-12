@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Meteor : Enemy
 {
-    [SerializeField] protected float minSpeed;
-    [SerializeField] protected float maxSpeed;
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private ScriptableObjectExample powerUpSpawner;
 
     private float speed;
     private float damage = 1.0f;
@@ -39,6 +40,10 @@ public class Meteor : Enemy
     {
         base.DeathSequence();
         Instantiate(explosion, transform.position, transform.rotation);
+        if(powerUpSpawner != null)
+        {
+            powerUpSpawner.SpawnPowerUp(transform.position);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

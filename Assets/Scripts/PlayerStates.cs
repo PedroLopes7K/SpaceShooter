@@ -10,7 +10,8 @@ public class PlayerStates : MonoBehaviour
     private float health;
     [SerializeField] private Animator animator;
     [SerializeField] private Image healthFill;
-    [SerializeField] protected GameObject explosion;
+    [SerializeField] private GameObject explosion;
+    [SerializeField] private Shield shield;
 
 
     private bool canRunAnimation = true;
@@ -33,6 +34,7 @@ public class PlayerStates : MonoBehaviour
 
     public void PlayerTakeDamage(float damage)
     {
+        if (shield.protection) return;
         health -= damage;
         healthFill.fillAmount = health / maxHealth;
         if (canRunAnimation)
@@ -50,6 +52,17 @@ public class PlayerStates : MonoBehaviour
 
         }
 
+    }
+    public void AddHealth(int healAmount)
+    {
+        health += healAmount;
+        if(health > maxHealth)
+        {
+            health = maxHealth;
+
+            // update health bar
+            healthFill.fillAmount = health / maxHealth;
+        }
     }
 
     private IEnumerator controlAnimation()

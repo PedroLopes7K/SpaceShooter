@@ -168,3 +168,4 @@ MonoBehaviour:
   scoreValue: 3
   minSpeed: 8
   maxSpeed: 10
+  powerUpSpawner: {fileID: 11400000, guid: 2eef1088e1efc4e8e84c3d606c57761e, type: 2}
