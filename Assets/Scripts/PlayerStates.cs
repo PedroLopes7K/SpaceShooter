@@ -59,10 +59,9 @@ public class PlayerStates : MonoBehaviour
         if(health > maxHealth)
         {
             health = maxHealth;
-
-            // update health bar
-            healthFill.fillAmount = health / maxHealth;
         }
+        // update health bar
+        healthFill.fillAmount = health / maxHealth;
     }
 
     private IEnumerator controlAnimation()

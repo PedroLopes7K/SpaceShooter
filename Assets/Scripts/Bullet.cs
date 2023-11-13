@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private float damage = 2;
+    [SerializeField] private float damage = 1;
     [SerializeField] private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -33,6 +33,23 @@ public class Bullet : MonoBehaviour
         //}
     }
 
+    public void UpdateSpeedAndDamage(float value)
+    {
+        StartCoroutine(ModifyShoot(value));
+    }
+
+    IEnumerator ModifyShoot(float value)
+    {
+        speed += value;
+        damage += value;
+
+        yield return new WaitForSeconds(2f);
+
+        speed -= value;
+        damage -= value;
+
+
+    }
 
     private void OnBecameInvisible()
     {

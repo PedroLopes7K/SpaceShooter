@@ -11,17 +11,16 @@ public class TapToPalay : MonoBehaviour
 
     void Start()
     {
-        // Start the coroutine to modify alpha in a loop
+        
         StartCoroutine(ModifyAlpha());
     }
 
     IEnumerator ModifyAlpha()
     {
-        float alphaValue = 1.0f; // Starting alpha value
+        float alphaValue = 1.0f; 
 
-        while (true) // Infinite loop
+        while (true) 
         {
-            // Decrease alpha by changeRate until it reaches 0
             while (alphaValue > 0)
             {
                 alphaValue -= changeRate;
@@ -31,7 +30,6 @@ public class TapToPalay : MonoBehaviour
                 yield return null;
             }
 
-            // Increase alpha by changeRate until it reaches 1
             while (alphaValue < 1)
             {
                 alphaValue += changeRate;
