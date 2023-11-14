@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PowerUpSpeedShot : MonoBehaviour
 {
-    private float shootImprove = 0.5f ;
-   [SerializeField] private Bullet bullet;
+    private float shootImprove = 0.1f ;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            //PlayerStates player = collision.GetComponent<PlayerStates>();
-            bullet.UpdateSpeedAndDamage(shootImprove);
+            PlayerShooting player = collision.GetComponent<PlayerShooting>();
+            player.UpdateSpeedAndDamage(shootImprove);
             Destroy(gameObject);
         }
     }

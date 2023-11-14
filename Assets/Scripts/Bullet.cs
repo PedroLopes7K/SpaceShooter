@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private float damage = 1;
+    //[SerializeField] private float speed;
+    //[SerializeField] private float damage = 1;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private PlayerStates playerState;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * speed;
+        //Debug.Log( "MEU VALOR" + playerState.getSpeedBullet());
+        //rb.velocity = transform.up * playerState.getSpeedBullet();
+        rb.velocity = transform.up * 10.0f;
     }
 
     // Update is called once per frame
@@ -24,7 +27,7 @@ public class Bullet : MonoBehaviour
     {
 
         Enemy enemy = collision.GetComponent<Enemy>();
-        enemy.TakeDamage(damage);
+        enemy.TakeDamage(playerState.getBulletDamage());
         Destroy(gameObject);
         //if (collision.CompareTag("Enemy"))
         //{
@@ -33,23 +36,7 @@ public class Bullet : MonoBehaviour
         //}
     }
 
-    public void UpdateSpeedAndDamage(float value)
-    {
-        StartCoroutine(ModifyShoot(value));
-    }
 
-    IEnumerator ModifyShoot(float value)
-    {
-        speed += value;
-        damage += value;
-
-        yield return new WaitForSeconds(2f);
-
-        speed -= value;
-        damage -= value;
-
-
-    }
 
     private void OnBecameInvisible()
     {

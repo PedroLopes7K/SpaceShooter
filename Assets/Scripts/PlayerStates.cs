@@ -12,6 +12,8 @@ public class PlayerStates : MonoBehaviour
     [SerializeField] private Image healthFill;
     [SerializeField] private GameObject explosion;
     [SerializeField] private Shield shield;
+    [SerializeField] private float bulletSpeed = 10.0f;
+    [SerializeField] private float bulletDamage = 1.0f;
 
 
     private bool canRunAnimation = true;
@@ -31,7 +33,16 @@ public class PlayerStates : MonoBehaviour
 
     }
 
+    public float getSpeedBullet()
+    {
+        return bulletSpeed;
+    }
 
+    public float getBulletDamage()
+    {
+        return bulletDamage;
+    }
+ 
     public void PlayerTakeDamage(float damage)
     {
         if (shield.protection) return;

@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform basicShootPoint;
 
-    [SerializeField] private float shootInterval;
+    private float shootInterval = 0.7f;
     private float intervalReset;
 
     // Start is called before the first frame update
@@ -25,6 +25,29 @@ public class PlayerShooting : MonoBehaviour
             Shoot();
             shootInterval = intervalReset;
         }
+    }
+
+    public void UpdateSpeedAndDamage(float value)
+    {
+        Debug.Log("VALOR ATUAL DO SHOOT " + shootInterval);
+        if (intervalReset > 0.1f)
+        {
+            StartCoroutine(ModifyShoot(value));
+            //ModifyShoot(value);
+
+        }
+    }
+
+    IEnumerator ModifyShoot(float value)
+    {
+
+        intervalReset -= value;
+
+        yield return new WaitForSeconds(10);
+
+        intervalReset += value;
+
+
     }
 
     private void Shoot()

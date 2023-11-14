@@ -1887,6 +1887,14 @@ PrefabInstance:
       propertyPath: healthFill
       value: 
       objectReference: {fileID: 382545618}
+    - target: {fileID: 472204716892725586, guid: 1ef2676fd1721499b977ae49d1f6ecef, type: 3}
+      propertyPath: bulletSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119654760627505033, guid: 1ef2676fd1721499b977ae49d1f6ecef, type: 3}
+      propertyPath: shootInterval
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3378884788130259875, guid: 1ef2676fd1721499b977ae49d1f6ecef, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2123,7 +2131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1033840458655082508, guid: f6d6162f47ba0406dbc3d6fd8a6d67dc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
