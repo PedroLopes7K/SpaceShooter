@@ -33,6 +33,7 @@ public class PlayerStates : MonoBehaviour
 
     }
 
+
     public float getSpeedBullet()
     {
         return bulletSpeed;
