@@ -10,10 +10,12 @@ public class BossBaseState : MonoBehaviour
     protected float maxLeft;
     protected float maxUp;
     protected float maxDown;
+    protected BossController bossController;
 
 
     void Awake()
     {
+        bossController = GetComponent<BossController>();
         mainCam = Camera.main;
     }
 

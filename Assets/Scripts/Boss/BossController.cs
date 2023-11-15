@@ -12,9 +12,16 @@ public enum BossStates
 }
 public class BossController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private BossEnter bossEnter;
+    [SerializeField] private BossFire bossFire;
+    [SerializeField] private BossStates testState;
+    [SerializeField] private bool test;
     void Start()
     {
+        if(test)
+        {
+            ChangeStatus(testState);
+        }
         
     }
 
@@ -24,10 +31,10 @@ public class BossController : MonoBehaviour
         switch(state)
         {
             case BossStates.enter:
-                Debug.Log("entert");
+                bossEnter.RunState();
                 break;
             case BossStates.fire:
-                Debug.Log("entert");
+                bossFire.RunState();
                 break;
             case BossStates.special:
                 Debug.Log("entert");
