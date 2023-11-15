@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     public void LoadLevelString(string levelName)
     {
         //SceneManager.LoadScene(levelName);
+        Debug.Log("LOAD SCENE: " + levelName);
         FadeCanvas.fader.FadeLoaderString(levelName);
     }
     public void LoadLevelIndex(int levelIndex)
