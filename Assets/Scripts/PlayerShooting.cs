@@ -8,6 +8,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Transform basicShootPoint;
     [SerializeField] private Transform basicShootPoint1;
     [SerializeField] private Transform basicShootPoint2;
+    [SerializeField] private AudioSource audioSource;
 
     private float shootInterval = 0.7f;
     private float intervalReset;
@@ -18,6 +19,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         intervalReset = shootInterval;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -96,6 +98,8 @@ public class PlayerShooting : MonoBehaviour
             Instantiate(bullet, basicShootPoint2.position, Quaternion.identity);
 
         }
+        audioSource.Play();
+
 
     }
 }

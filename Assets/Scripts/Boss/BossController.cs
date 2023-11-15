@@ -14,10 +14,12 @@ public class BossController : MonoBehaviour
 {
     [SerializeField] private BossEnter bossEnter;
     [SerializeField] private BossFire bossFire;
+    [SerializeField] private BossDeath bossDeath;
     [SerializeField] private BossStates testState;
     [SerializeField] private bool test;
     void Start()
     {
+        ChangeStatus(BossStates.enter);
         if(test)
         {
             ChangeStatus(testState);
@@ -40,7 +42,9 @@ public class BossController : MonoBehaviour
                 Debug.Log("entert");
                 break;
             case BossStates.death:
-                Debug.Log("entert");
+                bossEnter.StopState();
+                bossFire.StopState();
+                bossDeath.RunState();
                 break;
         }
     }

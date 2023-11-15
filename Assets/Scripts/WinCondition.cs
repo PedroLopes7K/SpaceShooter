@@ -6,7 +6,9 @@ public class WinCondition : MonoBehaviour
 {
     private float timer;
    [SerializeField] private float possibleWinTime;
-   [SerializeField] private GameObject[] spawners;
+   [SerializeField] private bool bossExist;
+    [SerializeField] private GameObject[] spawners;
+    [SerializeField] private GameObject bossSpawner;
 
     void Start()
     {
@@ -27,8 +29,17 @@ public class WinCondition : MonoBehaviour
             for(int i = 0; i< spawners.Length; i++) {
                 spawners[i].SetActive(false);
             }
-            EndGameManager.endGameManager.StartResolveSequence();
-            gameObject.SetActive(false);
+
+            if(bossExist == false)
+            {
+                EndGameManager.endGameManager.StartResolveSequence();
+                gameObject.SetActive(false);
+
+            }
+            else
+            {
+                bossSpawner.SetActive(true);
+            }
         }
         
     }

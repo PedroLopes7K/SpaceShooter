@@ -55,7 +55,7 @@ public class EndGameManager : MonoBehaviour
         {
             LoseGame();
         }
-            }
+     }
 
 
     public void WinGame()
