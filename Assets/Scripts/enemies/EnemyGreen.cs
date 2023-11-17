@@ -26,7 +26,8 @@ public class EnemyGreen : Enemy
     public override void HurtSequence()
     {
 
-        anim.SetTrigger("EnemyGreenDamage");
+        //anim.SetTrigger("EnemyGreenDamage");
+        anim.SetTrigger("GreenEnemyDmg");
 
     }
     public override void DeathSequence()

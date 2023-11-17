@@ -2565,7 +2565,7 @@ PrefabInstance:
       objectReference: {fileID: 447765809}
     - target: {fileID: 4056133384689774364, guid: 5034f6faa56284643a311f39982b90b1, type: 3}
       propertyPath: possibleWinTime
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4056133384689774364, guid: 5034f6faa56284643a311f39982b90b1, type: 3}
       propertyPath: spawners.Array.data[0]
