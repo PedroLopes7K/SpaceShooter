@@ -6,7 +6,6 @@ public class BossBaseState : MonoBehaviour
 {
 
     protected Camera mainCam;
-   [SerializeField] protected Camera setCam;
     protected float maxRight;
     protected float maxLeft;
     protected float maxUp;

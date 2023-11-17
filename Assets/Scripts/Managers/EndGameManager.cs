@@ -47,13 +47,16 @@ public class EndGameManager : MonoBehaviour
         ResolveGame();
     }
     public void ResolveGame() {
-
-    if(gameOver == false)
+        Debug.Log("RESOLVE GAME CALLED");
+        if (gameOver == false)
         {
-            WinGame();
+            Invoke("WinGame", 0.8f);
+            //WinGame();
         } else
         {
-            LoseGame();
+            Invoke("LoseGame", 0.8f);
+
+            //LoseGame();
         }
      }
 

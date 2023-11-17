@@ -31,6 +31,7 @@ public class BossController : MonoBehaviour
 
     public void ChangeStatus(BossStates state)
     {
+        Debug.Log("STATE: " + state);
         switch(state)
         {
             case BossStates.enter:
@@ -46,6 +47,11 @@ public class BossController : MonoBehaviour
             case BossStates.death:
                 bossEnter.StopState();
                 bossFire.StopState();
+                if(bossSpecial != null)
+                {
+                    bossSpecial.StopState();
+
+                }
                 bossDeath.RunState();
                 break;
         }

@@ -19,6 +19,7 @@ public class BossStats : Enemy
     public override void DeathSequence()
     {
         base.DeathSequence();
+        Debug.Log("Death Sequence Called");
         bossController.ChangeStatus(BossStates.death);
         Instantiate(explosion, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
     }
