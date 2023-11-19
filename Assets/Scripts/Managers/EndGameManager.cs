@@ -83,6 +83,11 @@ public class EndGameManager : MonoBehaviour
     private void SetScore()
     {
         PlayerPrefs.SetInt("Score" + SceneManager.GetActiveScene().name,  score);
+        float roundedDownValue = Mathf.Floor((score / 10));
+        Debug.Log("MY MONEY " + roundedDownValue);
+        float money = PlayerPrefs.GetInt("money", 0);
+        PlayerPrefs.SetFloat("money", roundedDownValue + money);
+
         int HighScore = PlayerPrefs.GetInt("HighScore" + SceneManager.GetActiveScene().name, 0);
         if(score > HighScore)
         {
