@@ -12,8 +12,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected Animator anim;
     [Header("Score"), SerializeField]
     protected int scoreValue;
+    protected bool canTakeDamage;
 
     // Start is called before the first frame update
+    void Awake()
+    {
+        canTakeDamage = false;
+    }
+
     void Start()
     {
         
@@ -28,6 +34,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (canTakeDamage == false)
+        {
+            return;
+        }
         health -= damage;
         HurtSequence();
 
@@ -41,12 +51,16 @@ public class Enemy : MonoBehaviour
 
     public virtual void HurtSequence()
     {
-
+        
     }
     public virtual void DeathSequence()
     {
 
         EndGameManager.endGameManager.updateScore(scoreValue);
         Destroy(gameObject);
+    }
+    private void OnBecameVisible()
+    {
+        canTakeDamage = true;
     }
 }

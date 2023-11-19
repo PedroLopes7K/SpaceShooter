@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     {
         //Debug.Log( "MEU VALOR" + playerState.getSpeedBullet());
         //rb.velocity = transform.up * playerState.getSpeedBullet();
-        rb.velocity = transform.up * 10.0f;
+        rb.velocity = transform.up * 8.0f;
     }
 
     // Update is called once per frame
